@@ -9,7 +9,7 @@ export const FILTERS = "FILTERS";
 //aca voy a crear mis actiosns
 export const getCountries = () => {
     return async function (dispatch){
-        const data = await axios.get("http://localhost:3001/countries");
+        const data = await axios.get("https://backpicountries-4pdg.onrender.com/countries");
         const countries = data.data;
         dispatch({ type: GET_COUNTRIES, payload: countries });
     };
@@ -17,7 +17,7 @@ export const getCountries = () => {
 
 export const getActivities = () => {
     return async function (dispatch){
-        const data = await axios.get("http://localhost:3001/activities");
+        const data = await axios.get("https://backpicountries-4pdg.onrender.com/activities");
         const activities = data.data;
         dispatch({ type: GET_ACTIVITIES, payload: activities });
     };
@@ -25,7 +25,7 @@ export const getActivities = () => {
 
 export const getDetails = (id) => {
     return async function (dispatch){
-        const data = await axios.get(`http://localhost:3001/countries/${id}`);
+        const data = await axios.get(`https://backpicountries-4pdg.onrender.com/countries/${id}`);
         const country = data.data;
         dispatch({ type: GET_DETAILS, payload: country });
     };
@@ -33,7 +33,7 @@ export const getDetails = (id) => {
 
 export const getByName = (name) => {
     return async function (dispatch){
-        const data = await axios.get(`http://localhost:3001/countries?name=${name}`);
+        const data = await axios.get(`https://backpicountries-4pdg.onrender.com/countries?name=${name}`);
         const countries = data.data;
         dispatch({ type: GET_BYNAME, payload: countries });
     };

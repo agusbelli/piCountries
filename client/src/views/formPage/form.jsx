@@ -100,7 +100,7 @@ const Form = () => {
 
     const submitHandler = (event) => {
         event.preventDefault()
-        const response = axios.post("http://localhost:3001/activities", form)
+        const response = axios.post("https://backpicountries-4pdg.onrender.com/activities", form)
         .then(res=>alert("Posted successfully!"))
         .catch(err=>alert("We were unable to post your activity, please try again or review the data you entered"))
     }
