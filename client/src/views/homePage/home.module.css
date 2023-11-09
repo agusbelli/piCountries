@@ -1,0 +1,12 @@
+.background{
+    background-color: #ffffff;
+    background-image: url('../../images/fondo7.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

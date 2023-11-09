@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: url('../../images/fondo14.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+.container2{
+    margin-top: 70px;
+    display: flex;
+    background-color: #0000005e;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.785);
+    width: 1000px;
+    height: 375px;
+}
+
+.container3{
+    border-right: 1px solid rgba(0, 0, 0, 0.358);
+    transition: all 0.2s ease-in-out;
+}
+.container3:hover{
+    background-color: #64646466;
+    transform: translateY(-20px);
+}
+.name {
+    margin-top: 10;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+.flag {
+    margin: 20px ;
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.785);
+
+  }
+.container4{
+    display: flex;
+}
+.data{
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.358);
+    display:grid;
+    height: 375px;
+    transition: all 0.2s ease-in-out;
+}
+.data:hover{
+    background-color: #64646466;
+    transform: translateY(-20px);
+}
+  h3 {
+    margin: 18px;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  
+  p {
+    margin: 5px 0;
+    font-size: 20px;
+  }
+  
+.a {
+    color: #2c5282;
+    margin-left: 50px;
+    text-decoration: none;
+  }
+  
+.a:hover {
+    text-decoration:underline;
+  }
+  
+  .activities {
+    margin-top: 20px;
+  }
+  
+  .activities p {
+    margin-left: 10px;
+  }
+  

@@ -1,0 +1,17 @@
+.divContainer{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.20rem;
+    text-align: center;
+    color: #09093c;
+}
+
+.divCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

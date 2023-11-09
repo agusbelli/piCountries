@@ -1,0 +1,11 @@
+.buttonStyle{
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    margin-left: 5px;
+    color: #09093c;
+    background-color: transparent;
+    cursor:pointer;
+    margin-top: 23px;
+}

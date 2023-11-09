@@ -1,0 +1,23 @@
+.inputStyle{
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #000000;
+    background-color: #09093c1e;
+
+}
+
+.buttonStyle{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-left: 5px;
+    color: #ffffff;
+    background-color: #09093c;
+    cursor:pointer;
+}

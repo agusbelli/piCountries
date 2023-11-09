@@ -1,0 +1,81 @@
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .header {
+    align-items: center;
+    background-image: url('../../images/fondo11.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+  
+  .logo {
+    margin-top: 500px;
+    width: 300px;
+    position: relative;
+  }
+  
+  .description {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.20rem;
+    text-align: center;
+    color: #fdfdff;
+    width: 100%;
+  }
+  .description2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.20rem;
+    text-align: center;
+    color: #141345;
+    width: 100%;
+  }
+
+.div2{
+  background-color: #faf5f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #1d275a;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2rem;
+  }
+  
+  button:hover {
+    background-color: #4242c0;
+  }
+  
+  .imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .destination {
+    width: calc(33.33% - 10px);
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 0 10px 10px 0;
+    transition: filter 0.3s ease;
+    cursor: pointer;
+  }
+  .destination:hover {
+    filter: brightness(50%);
+  }
+  
+

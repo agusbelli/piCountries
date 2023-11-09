@@ -1,0 +1,10 @@
+.selects{
+    background-color: transparent;
+    color: #26262b;
+    font-size: 15px;
+    height: 75px;
+    width: 120px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+}
