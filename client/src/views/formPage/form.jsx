@@ -1,13 +1,18 @@
 import style from './form.module.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from "react-redux"
-import { Link } from "react-router-dom"
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { getCountries } from '../../redux/actions';
 
 const Form = () => {
     const allCountries = useSelector((state)=>state.countries)
     const season = ["Summer", "Autumn", "Winter", "Spring"]
-    
+    const dispatch = useDispatch();
+    useEffect(()=>{
+      dispatch(getCountries())
+    },[dispatch])
+
     const [form, setForm] = useState({
         name:"",
         difficulty:"",
@@ -42,13 +47,10 @@ const Form = () => {
                   })
                 break;
             case "countries":
-                const countrieSelected = event.target.checked
                 const countryValue = event.target.value;
+                console.log(countryValue);
                   setForm((prevForm) => {
-                    const updatedCountries = countrieSelected
-                      ? [...prevForm.countries, countryValue]
-                      : prevForm.countries.filter((c) => c !== countryValue);
-                    const updatedForm = { ...prevForm, countries: updatedCountries };
+                    const updatedForm = { ...prevForm, countries: [countryValue] };
                     validate(updatedForm);
                     return updatedForm;
                 })
@@ -146,6 +148,11 @@ const Form = () => {
                             <span>{errors.duration}</span>
                         </label>
                         </div>
+                        
+                    </div>
+
+                        <div className={style.div3}>
+
                         <div className={style.divCampo}>
                         <label><h4>Select Seasons:</h4></label>
                         {season.map((s, index)=>(
@@ -162,27 +169,24 @@ const Form = () => {
                                 <br />
                             <span>{errors.season}</span>
                         </div>
-                    </div>
 
-                        <div className={style.div3}>
-                        <div className={style.titleCountries}>
-                        <label>Select Countries</label>
-                        </div>
+                        <div className={style.divCampo}>
+                        <label><h4>Select Countries</h4></label>
                         <span>{errors.countries}</span>
                         <div>
+                            <select name="countries">
                             {allCountries?.map((c) => (
-                                <label key={c.id}>
-                                    <input
-                                        type="checkbox"
-                                        name="countries"
+                                    <option
+                                        key={c.id}
                                         value={c.id}
-                                        checked={form.countries.includes(c.id)}
                                         onChange={changeHandler}
-                                        />{c.name}
-                                </label>
+                                        >{c.name}</option>
                             ))}
+                            </select>
                         </div>
                     </div>
+                    </div>
+
                 </div>
                     <button  className={style.submit} type='submit'>POST ACTIVITY</button>
             </form>
