@@ -10,6 +10,12 @@ const {
 const sequelize = new Sequelize(`${DB_HOST}`, {
   logging: false, 
   native: false, 
+  dialectOptions: {
+    ssl: {
+      require: true, 
+      rejectUnauthorized: false,
+    },
+  }
 });
 const basename = path.basename(__filename);
 
